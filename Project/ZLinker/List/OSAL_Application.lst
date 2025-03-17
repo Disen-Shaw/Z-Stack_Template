@@ -1,0 +1,333 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V10.10.1.4655 for 8051               17/Mar/2025  21:36:54
+# Copyright 2004-2017 IAR Systems AB.
+# Standalone license - IAR Embedded Workbench for 8051
+#
+#    Core               =  plain
+#    Code model         =  banked
+#    Data model         =  large
+#    Calling convention =  xdata reentrant
+#    Constant location  =  data_rom
+#    Dptr setup         =  1,16
+#                          
+#    Source file        =  
+#        E:\Github\Mine\Z-Stack\Code\Application\ZigBee\OSAL_Application.c
+#    Command line       =  
+#        -f C:\Users\ADMINI~1\AppData\Local\Temp\EW5DC1.tmp
+#        (E:\Github\Mine\Z-Stack\Code\Application\ZigBee\OSAL_Application.c -D
+#        SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D xZTOOL_P1 -D
+#        xMT_TASK -D xMT_APP_FUNC -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D
+#        xMT_ZDO_MGMT -D xMT_APP_CNF_FUNC -D LCD_SUPPORTED=DEBUG -D
+#        MULTICAST_ENABLED=FALSE -D ZCL_READ -D ZCL_DISCOVER -D ZCL_WRITE -D
+#        ZCL_BASIC -D ZCL_IDENTIFY -D ZCL_ON_OFF -D ZCL_GROUPS -D HAL_LED=TRUE
+#        -D HAL_UART=TRUE -D INT_HEAP_LEN=2048 -lC
+#        E:\Github\Mine\Z-Stack\Project\ZLinker\List -lA
+#        E:\Github\Mine\Z-Stack\Project\ZLinker\List --diag_suppress
+#        Pe001,Pa010 -o E:\Github\Mine\Z-Stack\Project\ZLinker\Obj -e --debug
+#        --core=plain --dptr=16,1 --data_model=large --code_model=banked
+#        --calling_convention=xdata_reentrant --place_constants=data_rom
+#        --nr_virtual_regs 16 -f
+#        E:\Github\Mine\Z-Stack\Project\..\Tools\CC2530DB\f8wAllDevice.cfg
+#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
+#        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
+#        -DOSC32K_CRYSTAL_INSTALLED=FASLE -DBUILD_ALL_DEVICES) -f
+#        E:\Github\Mine\Z-Stack\Project\..\Tools\CC2530DB\f8wConfig.cfg
+#        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+#        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+#        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+#        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+#        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+#        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+#        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+#        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+#        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+#        -DMAX_BINDING_CLUSTER_IDS=4 -DDEFAULT_KEY={0} -DMAC_MAX_FRAME_SIZE=116
+#        -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const __code"
+#        -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000
+#        -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440
+#        -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000 -DENABLE_LED4_DISABLE_S1)
+#        -f E:\Github\Mine\Z-Stack\Project\..\Tools\CC2530DB\f8wZCL.cfg -I
+#        E:\Github\Mine\Z-Stack\Project\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\stack\bdb\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\stack\GP\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\hal\include\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\hal\target\CC2530EB\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\mac\high_level\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\mac\low_level\srf04\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\mac\low_level\srf04\single_chip\
+#        -I E:\Github\Mine\Z-Stack\Project\..\Components\mac\include\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\mt\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\stack\nwk\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\osal\include\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\stack\af\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\stack\zcl\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\stack\sec\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\stack\sys\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\stack\sapi\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\stack\zdo\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\zmac\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\zmac\f8w\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\services\saddr\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\services\sdata\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Code\ZMain\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Code\Application\ZigBee\Inc\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Code\Application\UART\Inc\ -Ohz
+#        --require_prototypes)
+#    Locale             =  Chinese (Simplified)_China.936
+#    List file          =  
+#        E:\Github\Mine\Z-Stack\Project\ZLinker\List\OSAL_Application.lst
+#    Object file        =  
+#        E:\Github\Mine\Z-Stack\Project\ZLinker\Obj\OSAL_Application.r51
+#
+###############################################################################
+
+E:\Github\Mine\Z-Stack\Code\Application\ZigBee\OSAL_Application.c
+      1          
+      2          #include "ZComDef.h"
+      3          #include "hal_drivers.h"
+      4          #include "OSAL.h"
+      5          #include "OSAL_Tasks.h"
+      6          
+      7          #if defined ( MT_TASK )
+      8            #include "MT.h"
+      9            #include "MT_TASK.h"
+     10          #endif
+     11          
+     12          #include "nwk.h"
+     13          #include "APS.h"
+     14          #include "ZDApp.h"
+     15          
+     16          #include "bdb_interface.h"
+     17          #if !defined (DISABLE_GREENPOWER_BASIC_PROXY) && (ZG_BUILD_RTR_TYPE)
+     18            #include "gp_common.h"
+     19          #endif   
+     20          #if defined ( ZIGBEE_FREQ_AGILITY ) || defined ( ZIGBEE_PANID_CONFLICT )
+     21            #include "ZDNwkMgr.h"
+     22          #endif
+     23          #if defined ( ZIGBEE_FRAGMENTATION )
+     24            #include "aps_frag.h"
+     25          #endif
+     26          
+     27          #if defined ( INTER_PAN )
+     28            #include "stub_aps.h"
+     29          #if defined ( BDB_TL_INITIATOR )
+     30            #include "bdb_touchlink_initiator.h"
+     31          #endif // BDB_TL_INITIATOR
+     32          #if defined ( BDB_TL_TARGET )
+     33            #include "bdb_touchlink_target.h"
+     34          #endif // BDB_TL_TARGET
+     35          #endif // INTER_PAN
+     36          
+     37          #include "uart_port.h"
+     38          #include "OSAL_Application.h"
+     39          
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     40          const pTaskEventHandlerFn tasksArr[] = {
+   \                     tasksArr:
+   \   000000   ....         DW `??macEventLoop::?relay`
+   \   000002   ....         DW `??nwk_event_loop::?relay`
+   \   000004   ....         DW `??gp_event_loop::?relay`
+   \   000006   ....         DW `??Hal_ProcessEvent::?relay`
+   \   000008   ....         DW `??APS_event_loop::?relay`
+   \   00000A   ....         DW `??APSF_ProcessEvent::?relay`
+   \   00000C   ....         DW `??ZDApp_event_loop::?relay`
+   \   00000E   ....         DW `??ZDNwkMgr_event_loop::?relay`
+   \   000010   ....         DW `??zcl_event_loop::?relay`
+   \   000012   ....         DW `??bdb_event_loop::?relay`
+     41            macEventLoop,
+     42            nwk_event_loop,
+     43          #if !defined (DISABLE_GREENPOWER_BASIC_PROXY) && (ZG_BUILD_RTR_TYPE)
+     44            gp_event_loop,
+     45          #endif  
+     46            Hal_ProcessEvent,
+     47          #if defined( MT_TASK )
+     48            MT_ProcessEvent,
+     49          #endif
+     50            APS_event_loop,
+     51          #if defined ( ZIGBEE_FRAGMENTATION )
+     52            APSF_ProcessEvent,
+     53          #endif
+     54            ZDApp_event_loop,
+     55          #if defined ( ZIGBEE_FREQ_AGILITY ) || defined ( ZIGBEE_PANID_CONFLICT )
+     56            ZDNwkMgr_event_loop,
+     57          #endif
+     58            //Added to include TouchLink functionality
+     59            #if defined ( INTER_PAN )
+     60              StubAPS_ProcessEvent,
+     61            #endif
+     62            // Added to include TouchLink initiator functionality
+     63            #if defined ( BDB_TL_INITIATOR )
+     64              touchLinkInitiator_event_loop,
+     65            #endif
+     66            // Added to include TouchLink target functionality
+     67            #if defined ( BDB_TL_TARGET )
+     68              touchLinkTarget_event_loop,
+     69            #endif
+     70            zcl_event_loop,
+     71            bdb_event_loop,
+     72            // zclSampleSw_event_loop,
+     73          };
+     74          
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     75          const uint8 tasksCnt = sizeof( tasksArr ) / sizeof( tasksArr[0] );
+   \                     tasksCnt:
+   \   000000   0A           DB 10
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     76          uint16 *tasksEvents;
+   \                     tasksEvents:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+     77          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     78          void osalInitTasks( void )
+   \                     osalInitTasks:
+     79          {
+   \   000000   C082         PUSH      DPL
+   \   000002   C083         PUSH      DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     80            uint8 taskID = 0;
+     81          
+     82            tasksEvents = (uint16 *)osal_mem_alloc( sizeof( uint16 ) * tasksCnt);
+   \   000004                ; Setup parameters for call to function osal_mem_alloc
+   \   000004   7A14         MOV       R2,#0x14
+   \   000006   7B00         MOV       R3,#0x0
+   \   000008   12....       LCALL     `??osal_mem_alloc::?relay`; Banked call to: osal_mem_alloc
+   \   00000B   90....       MOV       DPTR,#tasksEvents
+   \   00000E   EA           MOV       A,R2
+   \   00000F   F0           MOVX      @DPTR,A
+   \   000010   A3           INC       DPTR
+   \   000011   EB           MOV       A,R3
+   \   000012   F0           MOVX      @DPTR,A
+     83            osal_memset( tasksEvents, 0, (sizeof( uint16 ) * tasksCnt));
+   \   000013                ; Setup parameters for call to function osal_memset
+   \   000013   7C14         MOV       R4,#0x14
+   \   000015   7D00         MOV       R5,#0x0
+   \   000017   7900         MOV       R1,#0x0
+   \   000019   12....       LCALL     `??osal_memset::?relay`; Banked call to: osal_memset
+     84          
+     85            macTaskInit( taskID++ );
+   \   00001C                ; Setup parameters for call to function macTaskInit
+   \   00001C   7900         MOV       R1,#0x0
+   \   00001E   12....       LCALL     `??macTaskInit::?relay`; Banked call to: macTaskInit
+     86            nwk_init( taskID++ );
+   \   000021                ; Setup parameters for call to function nwk_init
+   \   000021   7901         MOV       R1,#0x1
+   \   000023   12....       LCALL     `??nwk_init::?relay`; Banked call to: nwk_init
+     87          #if !defined (DISABLE_GREENPOWER_BASIC_PROXY) && (ZG_BUILD_RTR_TYPE)
+     88            gp_Init( taskID++ );
+   \   000026                ; Setup parameters for call to function gp_Init
+   \   000026   7902         MOV       R1,#0x2
+   \   000028   12....       LCALL     `??gp_Init::?relay`; Banked call to: gp_Init
+     89          #endif
+     90            Hal_Init( taskID++ );
+   \   00002B                ; Setup parameters for call to function Hal_Init
+   \   00002B   7903         MOV       R1,#0x3
+   \   00002D   12....       LCALL     `??Hal_Init::?relay`; Banked call to: Hal_Init
+     91          #if defined( MT_TASK )
+     92            MT_TaskInit( taskID++ );
+     93          #endif
+     94            APS_Init( taskID++ );
+   \   000030                ; Setup parameters for call to function APS_Init
+   \   000030   7904         MOV       R1,#0x4
+   \   000032   12....       LCALL     `??APS_Init::?relay`; Banked call to: APS_Init
+     95          #if defined ( ZIGBEE_FRAGMENTATION )
+     96            APSF_Init( taskID++ );
+   \   000035                ; Setup parameters for call to function APSF_Init
+   \   000035   7905         MOV       R1,#0x5
+   \   000037   12....       LCALL     `??APSF_Init::?relay`; Banked call to: APSF_Init
+     97          #endif
+     98            ZDApp_Init( taskID++ );
+   \   00003A                ; Setup parameters for call to function ZDApp_Init
+   \   00003A   7906         MOV       R1,#0x6
+   \   00003C   12....       LCALL     `??ZDApp_Init::?relay`; Banked call to: ZDApp_Init
+     99          #if defined ( ZIGBEE_FREQ_AGILITY ) || defined ( ZIGBEE_PANID_CONFLICT )
+    100            ZDNwkMgr_Init( taskID++ );
+   \   00003F                ; Setup parameters for call to function ZDNwkMgr_Init
+   \   00003F   7907         MOV       R1,#0x7
+   \   000041   12....       LCALL     `??ZDNwkMgr_Init::?relay`; Banked call to: ZDNwkMgr_Init
+    101          #endif
+    102            // Added to include TouchLink functionality 
+    103            #if defined ( INTER_PAN )
+    104              StubAPS_Init( taskID++ );
+    105            #endif
+    106            // Added to include TouchLink initiator functionality 
+    107            #if defined( BDB_TL_INITIATOR )
+    108              touchLinkInitiator_Init( taskID++ );
+    109            #endif
+    110            // Added to include TouchLink target functionality 
+    111            #if defined ( BDB_TL_TARGET )
+    112              touchLinkTarget_Init( taskID++ );
+    113            #endif
+    114            zcl_Init( taskID++ );
+   \   000044                ; Setup parameters for call to function zcl_Init
+   \   000044   7908         MOV       R1,#0x8
+   \   000046   12....       LCALL     `??zcl_Init::?relay`; Banked call to: zcl_Init
+    115            bdb_Init( taskID++ );
+   \   000049                ; Setup parameters for call to function bdb_Init
+   \   000049   7909         MOV       R1,#0x9
+   \   00004B   12....       LCALL     `??bdb_Init::?relay`; Banked call to: bdb_Init
+    116            uart_port_init();
+   \   00004E                ; Setup parameters for call to function uart_port_init
+   \   00004E   12....       LCALL     `??uart_port_init::?relay`; Banked call to: uart_port_init
+    117            // zclSampleSw_Init( taskID++ );
+    118          }
+   \   000051   D083         POP       DPH
+   \   000053   D082         POP       DPL
+   \   000055   02....       LJMP      ?BRET
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??osalInitTasks::?relay`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    osalInitTasks
+    119          
+    120          
+
+   Maximum stack usage in bytes:
+
+   ISTACK Function
+   ------ --------
+      2   osalInitTasks
+        2   -> APSF_Init
+        2   -> APS_Init
+        2   -> Hal_Init
+        2   -> ZDApp_Init
+        2   -> ZDNwkMgr_Init
+        2   -> bdb_Init
+        2   -> gp_Init
+        2   -> macTaskInit
+        2   -> nwk_init
+        2   -> osal_mem_alloc
+        2   -> osal_memset
+        2   -> uart_port_init
+        2   -> zcl_Init
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      88  osalInitTasks
+       6  osalInitTasks::?relay
+      20  tasksArr
+       1  tasksCnt
+       2  tasksEvents
+
+ 
+ 88 bytes in segment BANKED_CODE
+  6 bytes in segment BANK_RELAYS
+ 21 bytes in segment XDATA_ROM_C
+  2 bytes in segment XDATA_Z
+ 
+  6 bytes of CODE     memory
+ 21 bytes of CONST    memory
+ 88 bytes of HUGECODE memory
+  2 bytes of XDATA    memory
+
+Errors: none
+Warnings: none

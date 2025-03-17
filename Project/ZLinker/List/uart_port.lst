@@ -1,0 +1,270 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V10.10.1.4655 for 8051               17/Mar/2025  21:43:36
+# Copyright 2004-2017 IAR Systems AB.
+# Standalone license - IAR Embedded Workbench for 8051
+#
+#    Core               =  plain
+#    Code model         =  banked
+#    Data model         =  large
+#    Calling convention =  xdata reentrant
+#    Constant location  =  data_rom
+#    Dptr setup         =  1,16
+#                          
+#    Source file        =  
+#        E:\Github\Mine\Z-Stack\Code\Application\UART\uart_port.c
+#    Command line       =  
+#        -f C:\Users\ADMINI~1\AppData\Local\Temp\EW80AF.tmp
+#        (E:\Github\Mine\Z-Stack\Code\Application\UART\uart_port.c -D SECURE=1
+#        -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D xZTOOL_P1 -D xMT_TASK
+#        -D xMT_APP_FUNC -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D xMT_ZDO_MGMT -D
+#        xMT_APP_CNF_FUNC -D LCD_SUPPORTED=DEBUG -D MULTICAST_ENABLED=FALSE -D
+#        ZCL_READ -D ZCL_DISCOVER -D ZCL_WRITE -D ZCL_BASIC -D ZCL_IDENTIFY -D
+#        ZCL_ON_OFF -D ZCL_GROUPS -D HAL_LED=TRUE -D HAL_UART=TRUE -D
+#        INT_HEAP_LEN=2048 -lC E:\Github\Mine\Z-Stack\Project\ZLinker\List -lA
+#        E:\Github\Mine\Z-Stack\Project\ZLinker\List --diag_suppress
+#        Pe001,Pa010 -o E:\Github\Mine\Z-Stack\Project\ZLinker\Obj -e --debug
+#        --core=plain --dptr=16,1 --data_model=large --code_model=banked
+#        --calling_convention=xdata_reentrant --place_constants=data_rom
+#        --nr_virtual_regs 16 -f
+#        E:\Github\Mine\Z-Stack\Project\..\Tools\CC2530DB\f8wAllDevice.cfg
+#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
+#        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
+#        -DOSC32K_CRYSTAL_INSTALLED=FASLE -DBUILD_ALL_DEVICES) -f
+#        E:\Github\Mine\Z-Stack\Project\..\Tools\CC2530DB\f8wConfig.cfg
+#        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+#        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+#        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+#        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+#        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+#        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+#        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+#        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+#        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+#        -DMAX_BINDING_CLUSTER_IDS=4 -DDEFAULT_KEY={0} -DMAC_MAX_FRAME_SIZE=116
+#        -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const __code"
+#        -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000
+#        -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440
+#        -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000 -DENABLE_LED4_DISABLE_S1)
+#        -f E:\Github\Mine\Z-Stack\Project\..\Tools\CC2530DB\f8wZCL.cfg -I
+#        E:\Github\Mine\Z-Stack\Project\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\stack\bdb\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\stack\GP\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\hal\include\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\hal\target\CC2530EB\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\mac\high_level\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\mac\low_level\srf04\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\mac\low_level\srf04\single_chip\
+#        -I E:\Github\Mine\Z-Stack\Project\..\Components\mac\include\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\mt\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\stack\nwk\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\osal\include\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\stack\af\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\stack\zcl\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\stack\sec\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\stack\sys\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\stack\sapi\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\stack\zdo\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\zmac\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\zmac\f8w\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\services\saddr\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Components\services\sdata\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Code\ZMain\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Code\Application\ZigBee\Inc\ -I
+#        E:\Github\Mine\Z-Stack\Project\..\Code\Application\UART\Inc\ -Ohz
+#        --require_prototypes)
+#    Locale             =  Chinese (Simplified)_China.936
+#    List file          =  
+#        E:\Github\Mine\Z-Stack\Project\ZLinker\List\uart_port.lst
+#    Object file        =  
+#        E:\Github\Mine\Z-Stack\Project\ZLinker\Obj\uart_port.r51
+#
+###############################################################################
+
+E:\Github\Mine\Z-Stack\Code\Application\UART\uart_port.c
+      1          
+      2          #include "hal_uart.h"
+      3          #include "uart_port.h"
+      4          
+      5          #define APP_UARTPORT_BUF_LEN                    (128U)
+      6          
+      7          static void _uart_port_rx_callback(uint8 port, uint8 event);
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+      8          static uint8 uart_port_rx_buf[APP_UARTPORT_BUF_LEN];
+   \                     uart_port_rx_buf:
+   \   000000                DS 128
+   \   000080                REQUIRE __INIT_XDATA_Z
+      9          
+     10          /**
+     11           * @brief UART Hareware initialize
+     12           * @param none
+     13           * @retval none
+     14           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     15          void uart_port_init(void)
+   \                     uart_port_init:
+     16          {
+   \   000000   C082         PUSH      DPL
+   \   000002   C083         PUSH      DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 29
+   \   000004   74E3         MOV       A,#-0x1d
+   \   000006   12....       LCALL     ?ALLOC_XSTACK8
+     17              halUARTCfg_t uartConfig;
+     18              uartConfig.configured               = TRUE;
+   \   000009   85..82       MOV       DPL,?XSP + 0
+   \   00000C   85..83       MOV       DPH,?XSP + 1
+   \   00000F   7401         MOV       A,#0x1
+   \   000011   F0           MOVX      @DPTR,A
+     19              uartConfig.baudRate                 = HAL_UART_BR_115200;
+   \   000012   12....       LCALL     ?XSTACK_DISP0_8
+   \   000015   7404         MOV       A,#0x4
+   \   000017   F0           MOVX      @DPTR,A
+     20              uartConfig.flowControl              = FALSE;
+   \   000018   7402         MOV       A,#0x2
+   \   00001A   12....       LCALL     ?XSTACK_DISP0_8
+   \   00001D   E4           CLR       A
+   \   00001E   F0           MOVX      @DPTR,A
+     21              uartConfig.flowControlThreshold     = 0;
+   \   00001F   7403         MOV       A,#0x3
+   \   000021   12....       LCALL     ?XSTACK_DISP0_8
+   \   000024   E4           CLR       A
+   \   000025   F0           MOVX      @DPTR,A
+   \   000026   A3           INC       DPTR
+   \   000027   F0           MOVX      @DPTR,A
+     22              uartConfig.rx.maxBufSize            = APP_UARTPORT_BUF_LEN;
+   \   000028   740A         MOV       A,#0xa
+   \   00002A   12....       LCALL     ?XSTACK_DISP0_8
+   \   00002D   7480         MOV       A,#-0x80
+   \   00002F   F0           MOVX      @DPTR,A
+   \   000030   A3           INC       DPTR
+   \   000031   E4           CLR       A
+   \   000032   F0           MOVX      @DPTR,A
+     23              uartConfig.tx.maxBufSize            = 0;
+   \   000033   7412         MOV       A,#0x12
+   \   000035   12....       LCALL     ?XSTACK_DISP0_8
+   \   000038   E4           CLR       A
+   \   000039   F0           MOVX      @DPTR,A
+   \   00003A   A3           INC       DPTR
+   \   00003B   F0           MOVX      @DPTR,A
+     24              uartConfig.idleTimeout              = 5;
+   \   00003C   7405         MOV       A,#0x5
+   \   00003E   12....       LCALL     ?XSTACK_DISP0_8
+   \   000041   7405         MOV       A,#0x5
+   \   000043   F0           MOVX      @DPTR,A
+     25              uartConfig.intEnable                = TRUE;
+   \   000044   7416         MOV       A,#0x16
+   \   000046   12....       LCALL     ?XSTACK_DISP0_8
+   \   000049   7401         MOV       A,#0x1
+   \   00004B   F0           MOVX      @DPTR,A
+     26              uartConfig.callBackFunc             = _uart_port_rx_callback;
+   \   00004C   741B         MOV       A,#0x1b
+   \   00004E   12....       LCALL     ?XSTACK_DISP0_8
+   \   000051   74..         MOV       A,#`??_uart_port_rx_callback::?relay` & 0xff
+   \   000053   F0           MOVX      @DPTR,A
+   \   000054   A3           INC       DPTR
+   \   000055   74..         MOV       A,#(`??_uart_port_rx_callback::?relay` >> 8) & 0xff
+   \   000057   F0           MOVX      @DPTR,A
+     27              
+     28              HalUARTOpen(HAL_UART_PORT_0, &uartConfig);
+   \   000058                ; Setup parameters for call to function HalUARTOpen
+   \   000058   AA..         MOV       R2,?XSP + 0
+   \   00005A   AB..         MOV       R3,?XSP + 1
+   \   00005C   7900         MOV       R1,#0x0
+   \   00005E   12....       LCALL     `??HalUARTOpen::?relay`; Banked call to: HalUARTOpen
+     29          }
+   \   000061   741D         MOV       A,#0x1d
+   \   000063   12....       LCALL     ?DEALLOC_XSTACK8
+   \   000066   D083         POP       DPH
+   \   000068   D082         POP       DPL
+   \   00006A   02....       LJMP      ?BRET
+     30          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     31          static void _uart_port_rx_callback(uint8 port, uint8 event)
+   \                     _uart_port_rx_callback:
+     32          {
+   \   000000   74F7         MOV       A,#-0x9
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+     33              uint8 rx_len = Hal_UART_RxBufLen(HAL_UART_PORT_0);
+   \   000005                ; Setup parameters for call to function Hal_UART_RxBufLen
+   \   000005   7900         MOV       R1,#0x0
+   \   000007   12....       LCALL     `??Hal_UART_RxBufLen::?relay`; Banked call to: Hal_UART_RxBufLen
+   \   00000A   EA           MOV       A,R2
+     34              if(rx_len != 0)
+   \   00000B   601A         JZ        ??_uart_port_rx_callback_0
+     35              {
+     36                  HalUARTRead(HAL_UART_PORT_0, uart_port_rx_buf, rx_len);
+   \   00000D   FE           MOV       R6,A
+   \   00000E                ; Setup parameters for call to function HalUARTRead
+   \   00000E   FC           MOV       R4,A
+   \   00000F   7D00         MOV       R5,#0x0
+   \   000011   7A..         MOV       R2,#uart_port_rx_buf & 0xff
+   \   000013   7B..         MOV       R3,#(uart_port_rx_buf >> 8) & 0xff
+   \   000015   7900         MOV       R1,#0x0
+   \   000017   12....       LCALL     `??HalUARTRead::?relay`; Banked call to: HalUARTRead
+     37                  HalUARTWrite(HAL_UART_PORT_0, uart_port_rx_buf, rx_len);
+   \   00001A                ; Setup parameters for call to function HalUARTWrite
+   \   00001A   EE           MOV       A,R6
+   \   00001B   FC           MOV       R4,A
+   \   00001C   7D00         MOV       R5,#0x0
+   \   00001E   7A..         MOV       R2,#uart_port_rx_buf & 0xff
+   \   000020   7B..         MOV       R3,#(uart_port_rx_buf >> 8) & 0xff
+   \   000022   7900         MOV       R1,#0x0
+   \   000024   12....       LCALL     `??HalUARTWrite::?relay`; Banked call to: HalUARTWrite
+     38              }
+     39          }
+   \                     ??_uart_port_rx_callback_0:
+   \   000027   7F01         MOV       R7,#0x1
+   \   000029   02....       LJMP      ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??uart_port_init::?relay`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    uart_port_init
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??_uart_port_rx_callback::?relay`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    _uart_port_rx_callback
+     40          
+     41          
+     42          
+
+   Maximum stack usage in bytes:
+
+   ISTACK XSTACK Function
+   ------ ------ --------
+      0      9   _uart_port_rx_callback
+        0      9   -> HalUARTRead
+        0      9   -> HalUARTWrite
+        0      9   -> Hal_UART_RxBufLen
+      2     29   uart_port_init
+        2     29   -> HalUARTOpen
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      44  _uart_port_rx_callback
+       6  _uart_port_rx_callback::?relay
+     109  uart_port_init
+       6  uart_port_init::?relay
+     128  uart_port_rx_buf
+
+ 
+ 153 bytes in segment BANKED_CODE
+  12 bytes in segment BANK_RELAYS
+ 128 bytes in segment XDATA_Z
+ 
+  12 bytes of CODE     memory
+ 153 bytes of HUGECODE memory
+ 128 bytes of XDATA    memory
+
+Errors: none
+Warnings: none
